@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Grey+Qo&family=Whisper&display=swap');
+
+@font-face {
+    font-family: 'Cafetoria';
+    src: url('../fonts/Cafetoria.woff') format('woff');
+    font-weight: normal;
+	font-style: normal;
+	height: 100%;
+}
+
+body {
+    font-family: 'Arima', sans-serif;
+}
+
+.vertical-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.font-cormorant {
+    font-family: 'Cormorant Upright', sans-serif;
+}
+
+.font-whisper {
+    font-family: 'Whisper', sans-serif;
+}
+
+.font-grey-qo {
+    font-family: 'Grey Qo', sans-serif;
+}
+
+.font-cafetoria {
+    font-family: 'Cafetoria', sans-serif;
+}
+
+.fade-enter {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.fade-enter-active {
+    opacity: 1;
+}
+.fade-exit {
+    opacity: 1;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.fade-exit-active {
+    opacity: 0;
+    transform: translateY(-20px); /* Move the modal up a bit when fading out */
+    transition: opacity 1s ease, transform 1s ease; /* Ensure smooth transition */
+}
+
+/* Slider container styles */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+    min-width: 100%;
+}
+
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-20px); /* Move up slightly */
+    animation: fadeInDown 1s ease forwards 3s; /* 1s animation */
+}
+
+/* Keyframes for the fade in and move down effect */
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px); /* Move up slightly */
+    animation: fadeInUp 1s ease forwards 2s; /* 1s animation */
+}
+
+/* Keyframes for the fade in and move down effect */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
